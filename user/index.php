@@ -1,6 +1,6 @@
 <?php
 /*
- * signup.php
+ * index.php
  * 
  * Copyright 2014 RADAVARAM <radavaram@radavaram>
  * 
@@ -28,7 +28,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	<title>untitled</title>
+	<title>User Dashboard</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 0.21" />
 </head>
