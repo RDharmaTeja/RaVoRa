@@ -1,22 +1,27 @@
 <?php?>
 
-	<form>
+	<form method="post" action="/RVR/">
       <div class="row">
 		 <div class="small-9 columns"></div> 
         <div class="small-3 columns">
-          <input type="text" id="right-label" placeholder="User or Email Id">
+          <input type="text" id="right-label" name="user_name" placeholder="User or Email Id">
     </div>
   </div>
   <div class="row">
 		 <div class="small-9 columns"></div> 
         <div class="small-3 columns">
-          <input type="password" id="right-label" placeholder="Password">
+          <input type="password" id="right-label" name="user_pass" placeholder="Password">
+          <? 
+          if(isset($count)&&$count==0){
+          echo "<small class='error'>Invalid username or password</small>";
+         }
+    ?>
     </div>
   </div>
   <div class="row">
 		 <div class="small-9 columns"></div> 
         <div class="small-3 columns">
-          <button class="button tiny"><b>Login</b></button>
+          <button class="button tiny"><b>Login</b></button>  <a style="font-size:12px; color:#563d7c" href="">forgot password</a>
     </div>
   </div>
 		</form>

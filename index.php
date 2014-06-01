@@ -1,3 +1,6 @@
+<?php
+$sign_up=$_GET['sign_up'];
+?>
 <html class="no-js" lang="en">
 <head>
 <title>
@@ -10,7 +13,14 @@ Ra-Vo-Ra
 <body >
 <?php
 include("header.php");
-include("home_center.php");
+include("login.php");  
+ if($sign_up=="true")
+{
+	require("signup_center.php");}
+	else
+	{
+     require("home_center.php");
+     }  
 ?>
 	</body>
 </html>

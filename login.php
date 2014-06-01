@@ -20,21 +20,28 @@
  * MA 02110-1301, USA.
  * 
  * 
+ * 
  */
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+require("config.php");
+   $username=$_POST['user_name'];
+   $password=$_POST['user_pass'];
+   echo $username;
+   echo $password;
+  $clean_username = strip_tags(mysql_real_escape_string($username));
+  $clean_pass = strip_tags(mysql_real_escape_string($password));
+  
+  $check="SELECT * FROM users WHERE user_login='$clean_username' and user_pass='$clean_pass'";
+  $result=mysqli_query($connect, $check)or die ("Query failed");//checking indb
+  $count=mysqli_num_rows($result);
+  
+ if($count == 1)
+  {
+     echo  "login successfull";
+     session_register("myusername");
+     $_SESSION['login_user']=$clean_username;
+     header("location: /RVR/");
+ }
 
+}
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-	<title>Login</title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<meta name="generator" content="Geany 0.21" />
-</head>
-
-<body>
-	
-</body>
-
-</html>
