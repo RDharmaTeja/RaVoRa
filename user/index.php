@@ -1,6 +1,30 @@
 <?php
+ob_start();
+session_start();
+if(isset($_SESSION['login_core']))
+{
+	header("location: core.php");
+	exit();
+}
+if(!isset($_SESSION['login_user']))
+{
+	header("location: /RVR/");
+	exit();
+}
+?>
+<html class="no-js" lang="en">
+<head>
+<title>
+Ra-Vo-Ra
+</title>
+<link href="../includes/foundation/css/foundation.css" rel='stylesheet'>
+<link href="../includes/css/home.css" rel='stylesheet'>
+<script src="../includes/foundation/js/foundation.min.js"></script>
+</head>
+<body>
+<?php
 /*
- * index.php
+ * user index.php page
  * 
  * Copyright 2014 RADAVARAM <radavaram@radavaram>
  * 
@@ -21,20 +45,7 @@
  * 
  * 
  */
-
+require('header.php');
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-	<title>User Dashboard</title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<meta name="generator" content="Geany 0.21" />
-</head>
-
-<body>
-	
 </body>
-
 </html>

@@ -1,6 +1,7 @@
 <?php
 /*
  * login.php
+ * login script to check 'user' and directing to home page
  * 
  * Copyright 2014 RADAVARAM <radavaram@radavaram>
  * 
@@ -26,8 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 require("config.php");
    $username=$_POST['user_name'];
    $password=$_POST['user_pass'];
-   echo $username;
-   echo $password;
   $clean_username = strip_tags(mysql_real_escape_string($username));
   $clean_pass = strip_tags(mysql_real_escape_string($password));
   
@@ -40,7 +39,7 @@ require("config.php");
      echo  "login successfull";
      session_register("myusername");
      $_SESSION['login_user']=$clean_username;
-     header("location: /RVR/");
+     header("location: /RVR/user");
  }
 
 }

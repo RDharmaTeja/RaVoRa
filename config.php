@@ -1,4 +1,7 @@
 <?php
+/*
+ * database configuration file
+ * */
 define('DB_NAME','ravora');
 define('DB_USER','root');
 define('DB_PASS','darmateja');

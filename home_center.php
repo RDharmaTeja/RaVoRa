@@ -1,16 +1,16 @@
 <?php?>
 
-	<form method="post" action="/RVR/">
+	<form method="post" action="/RVR/" data-abide>
       <div class="row">
 		 <div class="small-9 columns"></div> 
         <div class="small-3 columns">
-          <input type="text" id="right-label" name="user_name" placeholder="User or Email Id">
+          <input type="text" id="right-label" required name="user_name" placeholder="User or Email Id">
     </div>
   </div>
   <div class="row">
 		 <div class="small-9 columns"></div> 
         <div class="small-3 columns">
-          <input type="password" id="right-label" name="user_pass" placeholder="Password">
+          <input type="password" id="right-label" required name="user_pass" placeholder="Password">
           <? 
           if(isset($count)&&$count==0){
           echo "<small class='error'>Invalid username or password</small>";

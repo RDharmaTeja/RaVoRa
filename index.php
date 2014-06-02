@@ -1,5 +1,13 @@
 <?php
+ob_start();
+session_start();
+if(isset($_SESSION['login_user']))
+{
+	header("location: /RVR/user");
+	exit();
+}
 $sign_up=$_GET['sign_up'];
+
 ?>
 <html class="no-js" lang="en">
 <head>
