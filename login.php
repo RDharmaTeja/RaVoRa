@@ -25,20 +25,21 @@
  */
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 require("config.php");
-   $username=$_POST['user_name'];
+   $username=$_POST['user_email'];
    $password=$_POST['user_pass'];
   $clean_username = strip_tags(mysql_real_escape_string($username));
   $clean_pass = strip_tags(mysql_real_escape_string($password));
   
-  $check="SELECT * FROM users WHERE user_login='$clean_username' and user_pass='$clean_pass'";
+  $check="SELECT * FROM users WHERE user_email='$username' and user_pass='$clean_pass'";
   $result=mysqli_query($connect, $check)or die ("Query failed");//checking indb
+  $user_details= mysqli_fetch_array($result);
   $count=mysqli_num_rows($result);
-  
- if($count == 1)
+  if($count == 1)
   {
-     echo  "login successfull";
      session_register("myusername");
-     $_SESSION['login_user']=$clean_username;
+     $_SESSION['user_email']=$user_details['user_email'];
+     $_SESSION['user_name']=$user_details['display_name'];
+     $_SESSION['user_id']=$user_details['ID'];
      header("location: /RVR/user");
  }
 

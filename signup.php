@@ -21,7 +21,27 @@
  * 
  * 
  */
- 
+ if ($_SERVER["REQUEST_METHOD"] == "POST"){
+require("config.php");
+   $display_name=$_POST['display_name'];
+   $user_email=$_POST['user_email'];
+   $user_pass=$_POST['user_pass'];
+   $check="SELECT * FROM users WHERE user_email='$user_email'";
+   $result=mysqli_query($connect, $check)or die ("Query failed");//checking indb
+   $count=mysqli_num_rows($result);
+   if($count==1){
+	   header("location: /RVR/?sign_up=true&email_exist=true");
+	   }
+  if($count == 0)
+  {
+	  $add_user=mysqli_query($connect,"INSERT INTO users (user_pass,user_email,display_name) VALUES ('$user_pass','$user_email','$display_name')");
+      session_register("myusername");
+     $_SESSION['user_email']=$user_email;
+     $_SESSION['user_name']=$display_name;
+     header("location: /RVR/user");
+ }
+
+}
 
 ?>
 

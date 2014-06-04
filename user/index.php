@@ -1,16 +1,5 @@
 <?php
-ob_start();
-session_start();
-if(isset($_SESSION['login_core']))
-{
-	header("location: core.php");
-	exit();
-}
-if(!isset($_SESSION['login_user']))
-{
-	header("location: /RVR/");
-	exit();
-}
+require('../login_check.php')
 ?>
 <html class="no-js" lang="en">
 <head>
@@ -19,7 +8,9 @@ Ra-Vo-Ra
 </title>
 <link href="../includes/foundation/css/foundation.css" rel='stylesheet'>
 <link href="../includes/css/home.css" rel='stylesheet'>
+<link href="../includes/foundation-icons/foundation-icons.css" rel='stylesheet'>
 <script src="../includes/foundation/js/foundation.min.js"></script>
+
 </head>
 <body>
 <?php
@@ -47,5 +38,6 @@ Ra-Vo-Ra
  */
 require('header.php');
 ?>
+User home page is on the way...
 </body>
 </html>
