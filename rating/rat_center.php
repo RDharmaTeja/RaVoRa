@@ -112,8 +112,9 @@
 			<div class="large-5 columns">
 						<input type="text" class="small">
 					</div>
-		<!--rating field-->
+		<!--rating field done-->
 			<div class="large-6 columns">
+
 <span class="rating">
     <input type="radio" class="rating-input">
     <label for="rating-input-1-5" class="rating-star"></label>
