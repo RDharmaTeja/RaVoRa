@@ -12,9 +12,9 @@ Ra-Vo-Ra
 <link href="../includes/foundation-icons/foundation-icons.css" rel='stylesheet'>
  <script>
 	  function display_matrix(){
-		  var rows=document.getElementById("sliderOutput1").innerHTML;
-		  var cols=document.getElementById("sliderOutput2").innerHTML;
-		 
+		  
+		  var rows=document.getElementById("sliderOutput1").value;
+		  var cols=document.getElementById("sliderOutput2").value;
 		  var i,j,content="";
 		  for (i=1;i<=rows;i++){
 	  content+="<div class='row'><div class='large-5 columns'><input type='text'></div><div class='large-6 columns'><span class='rating'>";

@@ -52,53 +52,66 @@
 		<span class="divider"></span>
 		 <div class="row">
 			
-			<div class="large-6 columns">
+			<div class="large-7 columns">
 			<label><a href="#">Rating Title</a></label><br>
 				<input type="text" >
 				</div>
-			<div class="large-4 columns">	
+			<div class="large-3 columns">	
 
 			<!-- number of rows starts here -->
 				<div class="row">
-					<div class="large-2 columns">
-					<label>
- Rows
-						</label>
-						</div>
-				     <div class="large-8 columns">
-					      <div class="range-slider radius" data-options="display_selector:#sliderOutput1;start: 1; end: 10;" data-slider="1">
+				     <div class="large-6 columns">
+					      <!--<div class="range-slider radius" data-options="display_selector:#sliderOutput1;start: 1; end: 10;" data-slider="1">
                              <span class="range-slider-handle" style="transform: translateX(-1px);"></span>
                               <span class="range-slider-active-segment" style="width: 0%;"></span>
-                           </div>
+                           </div>-->
+                     					<label><a href="#">
+ Rows</a>
+						</label>      <br> 
+        <select id="sliderOutput1" style="width:55px; height:32px;">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
                        </div>
-                   <div class="large-2 columns">
-                       <a href="#"><span id="sliderOutput1" style="display: block;margin-top: 20px;"></span></a>
-                   </div>
+                        <div class="large-6 columns">
+					      <!--<div class="range-slider radius" data-options="display_selector:#sliderOutput2;start: 1; end: 10;" data-slider="5">
+                             <span class="range-slider-handle" style="transform: translateX(-1px);"></span>
+                              <span class="range-slider-active-segment" style="width: 0%;"></span>
+                           </div>-->
+                           	<label><a href="#">
+ Columns</a>
+						</label> <br>
+                            <select id="sliderOutput2" style="width:55px; height:32px;">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" selected>5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+                       </div>
+                  
                 </div>
                 
                 <!-- number of columns starts here -->
-				<div class="row">
-					<div class="large-2 columns">
-					<label>
- columns
-						</label>
-						</div>
-				     <div class="large-8 columns">
-					      <div class="range-slider radius" data-options="display_selector:#sliderOutput2;start: 1; end: 10;" data-slider="5">
-                             <span class="range-slider-handle" style="transform: translateX(-1px);"></span>
-                              <span class="range-slider-active-segment" style="width: 0%;"></span>
-                           </div>
-                       </div>
-                   <div class="large-2 columns">
-                       <a href="#"><span id="sliderOutput2" style="display: block;margin-top: 20px;"></span></a>
-                   </div>
-                </div>
                 
                 
 			</div>
 			
 			<div class="large-2 columns">
-				<button class="tiny primary" onclick="display_matrix();" style="margin-top: 25px;"><b>Good to go</b></button><br>
+				<button class="tiny primary" onclick="display_matrix();" style="margin-top: 10px;"><b>Good to go</b></button><br>
 				<a href="#" data-tooltip="" class="has-tip tip-right" data-selector="tooltip-hw3l0t4g0" title="Give number of rows and columns of the rating matrix">What is this?</a>
 				</div>
 		
