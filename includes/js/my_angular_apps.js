@@ -23,6 +23,8 @@ app1.controller("printmatrix", function($scope){
 	  // matrix printing ends............		  	 
 
 			}
+
+ //preview function
 		$scope.preview=function(){
 			 var sub_question,i,preview_content="";
 			 for (i=1;i<=$scope.rows;i++){
@@ -36,7 +38,20 @@ app1.controller("printmatrix", function($scope){
 				 }
 				 document.getElementById("preview").innerHTML=preview_content;
 			}
-             
+ 
+ 
+ //add new row...
+ $scope.add_row=function(){
+	 var existing_cont=document.getElementById("matrix").innerHTML;
+	 	  existing_cont+="<div class='row'><div class='large-5 columns'><input ng-model='rating_subq_"+($scope.rows+1)+"' id='rating_subq_"+($scope.rows+1)+"' type='text'></div><div class='large-6 columns'><span class='rating'>";
+			  for(j=1;j<=$scope.cols;j++){
+				existing_cont+="    <input type='radio' class='rating-input'><label class='rating-star'></label>";  
+				  }
+				  existing_cont+="</span></div></div>"; 
+				  $scope.rows++;
+	 document.getElementById("matrix").innerHTML=existing_cont;
+	 }
+                   
  
 });
 //printing the star box ends

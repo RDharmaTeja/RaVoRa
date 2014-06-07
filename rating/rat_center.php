@@ -111,8 +111,9 @@
 				     <input type='radio' class='rating-input'><label class='rating-star'></label>
 				     </span></div></div>
 
-</div>
 
+</div>
+<center><a href="#" ng-click="add_row();">Add New Row</a></center>
 				</div>	
 				</form>	
 		</div>		
