@@ -31,7 +31,7 @@
 			<!--TOP menu bar for -->
 			<div class="large-6 columns">
 			<div class="button-bar">
-  <ul class="button-group round">
+  <ul class="button-group ">
     <li><a href="#" class="tiny button primary"><b>Designing Widget</b></a></li>
     <li><a href="#" data-reveal-id="myModal" class="tiny button secondary [disabled]"><b>Preview</b></a></li>
 <!--preview starts-->
