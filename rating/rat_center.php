@@ -68,7 +68,7 @@
                      					<label><a href="#">
  Rows</a>
 						</label>      <br> 
-        <select id="sliderOutput1" style="width:55px; height:32px;" ng-model="rows">
+        <select id="sliderOutput1" style="width:55px; height:32px;" ng-model="rows" ng-change="change()">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -89,7 +89,7 @@
                            	<label><a href="#">
  Columns</a>
 						</label> <br>
-                            <select id="sliderOutput2" style="width:55px; height:32px;" ng-model="cols">
+                            <select id="sliderOutput2" style="width:55px; height:32px;" ng-model="cols" ng-change="change()">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -122,7 +122,13 @@
 			<label><a href="#">Sub Questions</a></label></br>
 		<!--questions field-->
 		<div id="matrix">
-	
+			<div class='row'><div class='large-5 columns'><input type='text'></div><div class='large-6 columns'><span class='rating'>
+				 <input type='radio' class='rating-input'><label class='rating-star'></label>
+				  <input type='radio' class='rating-input'><label class='rating-star'></label>
+				   <input type='radio' class='rating-input'><label class='rating-star'></label>
+				    <input type='radio' class='rating-input'><label class='rating-star'></label>
+				     <input type='radio' class='rating-input'><label class='rating-star'></label>
+				     </span></div></div>
 
 </div>
 

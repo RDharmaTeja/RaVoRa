@@ -3,18 +3,21 @@ var app1 = angular.module('app1', []);
  
 app1.controller("printmatrix", function($scope){
  
-                   var rows=$scope.rows=1;
-                   var cols=$scope.cols=5;
-                   $scope.content="<b>teja</b>";
-		 var i,j;
-		  //for (i=1;i<=$scope.rows;i++){
-	      //$scope.content+='<div class="row"><div class="large-5 columns"><input type="text"></div><div class="large-6 columns"><span class="rating">';
-			//  for(j=1;j<=$scope.cols;j++){
-				//$scope.content+="<input type='radio' class='rating-input'><label class='rating-star'></label>";  
-				  //}
-				  //$scope.content+="</span></div></div>";
+                   $scope.rows=1;
+                   $scope.cols=5;
+		$scope.change= function(){
+			var i,j,content="";
+		  for (i=1;i<=$scope.rows;i++){
+	  content+="<div class='row'><div class='large-5 columns'><input type='text'></div><div class='large-6 columns'><span class='rating'>";
+			  for(j=1;j<=$scope.cols;j++){
+				content+="    <input type='radio' class='rating-input'><label class='rating-star'></label>";  
+				  }
+				  content+="</span></div></div>";  
 				
-			  //}	
+			  }
+			  	 document.getElementById("matrix").innerHTML=content;	
+			
+			}
 		  
              
  
