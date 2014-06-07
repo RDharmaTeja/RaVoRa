@@ -4,23 +4,6 @@
  * rat_center.php
  * 
  * Copyright 2014 RADAVARAM <radavaram@radavaram>
- * 
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301, USA.
- * 
- * 
  */
 
 ?>
@@ -33,12 +16,12 @@
 			<div class="button-bar">
   <ul class="button-group ">
     <li><a href="#" class="tiny button primary"><b>Designing Widget</b></a></li>
-    <li><a href="#" data-reveal-id="myModal" class="tiny button secondary [disabled]"><b>Preview</b></a></li>
+    <li><a href="#" data-reveal-id="myModal" ng-click="preview();" class="tiny button secondary [disabled]"><b>Preview</b></a></li>
 <!--preview starts-->
 <div id="myModal" class="reveal-modal" data-reveal>
-  <h2>legen...Wait for it..</h2>
-  <p class="lead">This going to be epic wesite...dary</p>
-  <p></p>
+  <center><h3><a href="#">{{rating_title}}</a></h3></center>
+<div id="preview">
+	</div>
   <a class="close-reveal-modal">&#215;</a>
 </div>
     <!--preview ends-->
@@ -48,13 +31,12 @@
 </div>
 			</div>
 		</div>
-		<hr></hr>
-		<span class="divider"></span>
-		 <div class="row">
+<form>		
+		 <div class="row panel callout radius">
 			
-			<div class="large-7 columns">
+			<div class="large-8 columns">
 			<label><a href="#">Rating Title</a></label><br>
-				<input type="text" >
+				<input type="text" ng-model="rating_title" name="rating_title" required placeholder="New Question">
 				</div>
 			<div class="large-3 columns">	
 
@@ -65,10 +47,10 @@
                              <span class="range-slider-handle" style="transform: translateX(-1px);"></span>
                               <span class="range-slider-active-segment" style="width: 0%;"></span>
                            </div>-->
-                     					<label><a href="#">
+             <label><a href="#" data-tooltip="1" class="has-tip tip-left" data-selector="tooltip" title="Number of Questions">
  Rows</a>
 						</label>      <br> 
-        <select id="sliderOutput1" style="width:55px; height:32px;" ng-model="rows" ng-change="change()">
+        <select id="sliderOutput1" style="width:55px; height:32px;" ng-model="rows" ng-change="matrix_change()">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -86,10 +68,10 @@
                              <span class="range-slider-handle" style="transform: translateX(-1px);"></span>
                               <span class="range-slider-active-segment" style="width: 0%;"></span>
                            </div>-->
-                           	<label><a href="#">
+           <label><a href="#" data-tooltip="2" class="has-tip tip-right" data-selector="tooltip" title="Number of Stars">
  Columns</a>
 						</label> <br>
-                            <select id="sliderOutput2" style="width:55px; height:32px;" ng-model="cols" ng-change="change()">
+                            <select id="sliderOutput2" style="width:55px; height:32px;" ng-model="cols" ng-change="matrix_change()">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -110,19 +92,18 @@
                 
 			</div>
 			
-			<div class="large-2 columns">
-				<button class="tiny primary" onclick="display_matrix();" style="margin-top: 10px;"><b>Good to go</b></button><br>
-				<a href="#" data-tooltip="" class="has-tip tip-right" data-selector="tooltip-hw3l0t4g0" title="Give number of rows and columns of the rating matrix">What is this?</a>
+			<div class="large-1 columns">
+				
 				</div>
 		
 			</div>
 				
 	<!-- sub questions division starts-->			
-		<div class="row panel radius">
+		<div class="row panel callout radius">
 			<label><a href="#">Sub Questions</a></label></br>
 		<!--questions field-->
 		<div id="matrix">
-			<div class='row'><div class='large-5 columns'><input type='text'></div><div class='large-6 columns'><span class='rating'>
+			<div class='row'><div class='large-5 columns'><input ng-model='rating_subq_1' id="rating_subq_1" type='text'></div><div class='large-6 columns'><span class='rating'>
 				 <input type='radio' class='rating-input'><label class='rating-star'></label>
 				  <input type='radio' class='rating-input'><label class='rating-star'></label>
 				   <input type='radio' class='rating-input'><label class='rating-star'></label>
@@ -132,7 +113,8 @@
 
 </div>
 
-				</div>		
+				</div>	
+				</form>	
 		</div>		
 		</div>
 	<!-- sub questions division stops-->	

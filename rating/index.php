@@ -13,7 +13,7 @@ Ra-Vo-Ra
 <script src="../includes/js/angular.min.js"></script>
 <script src="../includes/js/my_angular_apps.js"></script>
  <script>
-	 
+	 /*
 	  function display_matrix(){
 		  
 		  var rows=document.getElementById("sliderOutput1").value;
@@ -29,7 +29,7 @@ Ra-Vo-Ra
 			  }
 			  	 document.getElementById("matrix").innerHTML=content;	
 		  }
-		  
+		*/  
 	  </script>
   <script src="../includes/foundation/js/vendor/jquery.js"></script>
 <script src="../includes/foundation/js/vendor/fastclick.js"></script>
