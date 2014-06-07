@@ -9,8 +9,81 @@ Ra-Vo-Ra
 <link href="../includes/foundation/css/foundation.css" rel='stylesheet'>
 <link href="../includes/css/home.css" rel='stylesheet'>
 <link href="../includes/foundation-icons/foundation-icons.css" rel='stylesheet'>
-<script src="../includes/foundation/js/foundation.min.js"></script>
-
+  <script src="../includes/foundation/js/vendor/jquery.js"></script>
+<script src="../includes/foundation/js/vendor/fastclick.js"></script>
+ <script src="../includes/foundation/js/vendor/modernizr.js"></script>
+  <script src="../includes/foundation/js/foundation.min.js"></script>
+<script>
+	function show_rating(){
+		var xmlhttp;
+		document.getElementById("show_ravora").innerHTML='<center>Loading content..</center><br><center><img src="../includes/images/728.GIF"></center>';
+		document.getElementById("rating_li").className="active";
+		document.getElementById("voting_li").className="";
+		document.getElementById("ranking_li").className="";
+		document.getElementById("all_li").className="";
+		
+		if (window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+		}
+		else{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		xmlhttp.open("POST","show_rating.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState==4&&xmlhttp.status==200){
+				document.getElementById("show_ravora").innerHTML=xmlhttp.responseText;
+				}
+			}
+		}
+		
+		function show_voting(){
+		var xmlhttp;
+		document.getElementById("show_ravora").innerHTML='<center>Loading content..</center><br><center><img src="../includes/images/728.GIF"></center>';
+	    document.getElementById("rating_li").className="";
+		document.getElementById("voting_li").className="active";
+		document.getElementById("ranking_li").className="";
+		document.getElementById("all_li").className="";
+		
+		if (window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+		}
+		else{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		xmlhttp.open("POST","show_voting.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState==4&&xmlhttp.status==200){
+				document.getElementById("show_ravora").innerHTML=xmlhttp.responseText;
+				}
+			
+			}
+		}
+		
+		function show_ranking(){
+		var xmlhttp;
+		document.getElementById("show_ravora").innerHTML='<center>Loading content..</center><br><center><img src="../includes/images/728.GIF"></center>';
+		document.getElementById("rating_li").className="";
+		document.getElementById("voting_li").className="";
+		document.getElementById("ranking_li").className="active";
+		document.getElementById("all_li").className="";
+		
+		if (window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+		}
+		else{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		xmlhttp.open("POST","show_ranking.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState==4&&xmlhttp.status==200){
+				document.getElementById("show_ravora").innerHTML=xmlhttp.responseText;
+				}
+			}
+		}
+	</script>
 </head>
 <body>
 <?php
@@ -37,7 +110,10 @@ Ra-Vo-Ra
  * 
  */
 require('header.php');
+require('left_nav.php');
 ?>
-User home page is on the way...
+<script>
+  $(document).foundation();
+</script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+ .rating {
+      overflow: hidden;
+      display: inline-block;
+  }
+  .rating-input {
+      float: right;
+      width: 0px;
+      height: 16px;
+      padding: 0;
+      margin: 0 0 0 -5px;
+      opacity: 0;
+  }
+    .rating-star {
+      position: relative;
+      float: right;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url('../images/star.png') 0 -16px;
+  }
+
+  .rating-star:hover,
+  .rating-star:hover ~ .rating-star {
+      background-position: 0 0;
+  }

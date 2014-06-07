@@ -9,23 +9,11 @@
 
   <section class="top-bar-section">
     <!-- Right Nav Section -->
-    
-    <ul class="right">
-	  <li class="has-form">
-		  <?
-		  if($sign_up=="true"){
-		  echo "";
-		  }
-		  else
-		  {
-			  echo"<a href='/RVR/?sign_up=true' class='small button'><b>Sign Up</b></a>";}
-		  ?>
-		  </li>
-    </ul>
+
 
     <!-- Left Nav Section--> 
     <ul class="left">
-      <li class="active"><a href="/RVR/"><b>RATE-VOTE-RANK</b></a></li>
+      <li class="active"><a href="#"><b>RATE-VOTE-RANK</b></a></li>
 	  <li class="divider"></li>
 	  <li><a href="#">How It Works</a><li>
 	  <li class="divider"></li>
@@ -40,6 +28,20 @@
 	  <li>
 	  <li class="divider"></li>
     </ul> 
+    
+        
+    <ul class="right">
+	  <li class="has-form">
+		  <?
+		  if($sign_up=="true"||$forgot_pass=="true"){
+		  echo "<a href='/RVR/' class='small button'><b>Login</b></a>";
+		  }
+		  else
+		  {
+			  echo"<a href='/RVR/?sign_up=true' class='small button'><b>Sign Up</b></a>";}
+		  ?>
+		  </li>
+    </ul>
   </section>
 </nav>
 <div>

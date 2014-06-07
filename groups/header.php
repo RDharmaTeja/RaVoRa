@@ -62,7 +62,14 @@ session_start();
 	  <li class="divider"></li>
 	  <li><a href="/RVR/friends"><i class="step fi-torsos size-24"></i>&nbsp;<b>Friends</b></a><li>
 	  <li class="divider"></li>
-	  <li><a href="/RVR/start"><i class="step fi-star size-24"></i>&nbsp;<b>Start a RaVoRa</b></a><li>
+	  <li class="has-dropdown"><a href="#"><i class="step fi-star size-24"></i>&nbsp;<b>Start a RaVoRa</b></a>
+	  <ul class="dropdown">
+		   <li><a href="#" onclick="show_rating();"><i class="step fi-star size-24"></i>&nbsp; <b>Rating</b></a></li>
+      <li><a href="#" onclick="show_voting();"><i class="step fi-like size-24"></i>&nbsp; <b>Voting</b></a></li>
+      <li><a href="#" onclick="show_ranking();"><i class="step fi-list-number size-26"></i>&nbsp; <b>Ranking</b></a></li>
+		  
+		  </ul>
+	  </li>
        <li class="divider"></li>
     </ul> 
   </section>

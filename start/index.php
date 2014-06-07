@@ -13,16 +13,19 @@ Ra-Vo-Ra
 <script src="../includes/foundation/js/vendor/fastclick.js"></script>
  <script src="../includes/foundation/js/vendor/modernizr.js"></script>
   <script src="../includes/foundation/js/foundation.min.js"></script>
+<!-- ajax functions to load ravoras-->
 
+	<!--ajax loading functions ends here-->
 </head>
 <body>
 <?php
 /*
- * index.php page for user groups
- * 
+ * index.php page for user start a ravora
+  * 
  * Copyright 2014 RADAVARAM <radavaram@radavaram>
  */
 require('header.php');
+require('left_nav.php');
 ?>
 
 

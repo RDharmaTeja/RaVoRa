@@ -2,6 +2,8 @@
 	function loadxml(){
 		var xmlhttp;
 		var email_id=document.getElementById("email").value;
+		document.getElementById("center").innerHTML='<center>Checking Email..</centerc><center><img src="includes/images/728.GIF"></center>';
+	
 		if (window.XMLHttpRequest){
 		xmlhttp=new XMLHttpRequest();
 		}
@@ -15,7 +17,8 @@
 		xmlhttp.onreadystatechange=function(){
 			if(xmlhttp.readyState==4&&xmlhttp.status==200){
 				document.getElementById("center").innerHTML=xmlhttp.responseText;
-				}
+				}	
+				
 			}
 		}
 	</script>
@@ -36,8 +39,8 @@
 	 }
 
 ?>
+<center><div id="loading"></div></center>
 <div id="center">
-
 	<center>Enter your <b>Email Id</b>, we will send you a link for changing password.</center><br>
 	<center><div class="large-3"><input name='email'  required  id="email" type="email" placeholder="Email Id.."></div></center>
 	<center><button class="button tiny" onclick="loadxml()"><b>Send</b></button></center>
