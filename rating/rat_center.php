@@ -24,7 +24,7 @@
  */
 
 ?>
-<div class="row">
+<div class="row" ng-controller="printmatrix">
 	<div class="large-12 columns">
 		<div class="row">
 			<div class="large-6 columns"><h3>New Rating</h3></div>
@@ -68,7 +68,7 @@
                      					<label><a href="#">
  Rows</a>
 						</label>      <br> 
-        <select id="sliderOutput1" style="width:55px; height:32px;">
+        <select id="sliderOutput1" style="width:55px; height:32px;" ng-model="rows">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -89,7 +89,7 @@
                            	<label><a href="#">
  Columns</a>
 						</label> <br>
-                            <select id="sliderOutput2" style="width:55px; height:32px;">
+                            <select id="sliderOutput2" style="width:55px; height:32px;" ng-model="cols">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -122,26 +122,9 @@
 			<label><a href="#">Sub Questions</a></label></br>
 		<!--questions field-->
 		<div id="matrix">
-			<div class="large-5 columns">
-						<input type="text" class="small">
-					</div>
-		<!--rating field done-->
-			<div class="large-6 columns">
+	
 
-<span class="rating">
-    <input type="radio" class="rating-input">
-    <label for="rating-input-1-5" class="rating-star"></label>
-    <input type="radio" class="rating-input">
-    <label for="rating-input-1-4" class="rating-star"></label>
-    <input type="radio" class="rating-input">
-    <label for="rating-input-1-3" class="rating-star"></label>
-    <input type="radio" class="rating-input">
-    <label for="rating-input-1-2" class="rating-star"></label>
-    <input type="radio" class="rating-input">
-    <label for="rating-input-1-1" class="rating-star"></label>
-</span>
-
-
+</div>
 
 				</div>		
 		</div>		

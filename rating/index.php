@@ -10,7 +10,10 @@ Ra-Vo-Ra
 <link href="../includes/css/home.css" rel='stylesheet'>
 <link href="../includes/css/rating.css" rel='stylesheet'>
 <link href="../includes/foundation-icons/foundation-icons.css" rel='stylesheet'>
+<script src="../includes/js/angular.min.js"></script>
+<script src="../includes/js/my_angular_apps.js"></script>
  <script>
+	 /*
 	  function display_matrix(){
 		  
 		  var rows=document.getElementById("sliderOutput1").value;
@@ -26,6 +29,7 @@ Ra-Vo-Ra
 			  }
 			  	 document.getElementById("matrix").innerHTML=content;	
 		  }
+		  */
 	  </script>
   <script src="../includes/foundation/js/vendor/jquery.js"></script>
 <script src="../includes/foundation/js/vendor/fastclick.js"></script>
@@ -34,7 +38,7 @@ Ra-Vo-Ra
  
   
 </head>
-<body>
+<body ng-app="app1">
 <?php
 /*
  * rating index.php page
