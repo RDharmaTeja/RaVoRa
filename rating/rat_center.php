@@ -26,7 +26,7 @@
 </div>
     <!--preview ends-->
     
-    <li><a href="#" class="tiny button secondary [disabled]"><b>Get Rated</b></a></li>
+    <li><a href="#" class="tiny button secondary [disabled]"><b>Publish</b></a></li>
   </ul>
 </div>
 			</div>
@@ -36,7 +36,7 @@
 			
 			<div class="large-8 columns">
 			<label><a href="#">Rating Title</a></label><br>
-				<input type="text" ng-model="rating_title" name="rating_title" required placeholder="New Question">
+				<input type="text" required ng-model="rating_title" name="rating_title" required placeholder="Title">
 				</div>
 			<div class="large-3 columns">	
 
@@ -50,8 +50,17 @@
              <label><a href="#" data-tooltip="1" class="has-tip tip-left" data-selector="tooltip" title="Number of Questions">
  Questions</a>
 						</label>      <br> 
-        <select disabled id="sliderOutput1" style="width:55px; height:32px;" ng-model="rows">
- <option>{{rows}}</option>
+        <select id="sliderOutput1" style="width:55px; height:32px;" ng-change="matrix_change()" ng-model="rows">
+ <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
         </select>
                        </div>
                         <div class="large-6 columns">
@@ -94,17 +103,20 @@
 			<label><a href="#">Sub Questions</a></label></br>
 		<!--questions field-->
 		<div id="matrix">
+			<div id="row_id_1">
 			<div class='row'><div class='large-5 columns'><input ng-model='rating_subq_1' id="rating_subq_1" type='text'></div><div class='large-6 columns'><span class='rating'>
 				 <input type='radio' class='rating-input'><label class='rating-star'></label>
 				  <input type='radio' class='rating-input'><label class='rating-star'></label>
 				   <input type='radio' class='rating-input'><label class='rating-star'></label>
 				    <input type='radio' class='rating-input'><label class='rating-star'></label>
 				     <input type='radio' class='rating-input'><label class='rating-star'></label>
-				     </span></div></div>
-
+				     </span></div>
+				     <div class="large-1 columns"><span onclick="delete_row('row_id_1');" class="error">Delete</span></div>
+				     </div>
+</div>
 
 </div>
-<center><a href="#" ng-click="add_row();">Add New Row</a></center>
+<center><a href="#" ng-click="add_row();">Add New Question</a></center>
 				</div>	
 				</form>	
 		</div>		
