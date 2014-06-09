@@ -42,25 +42,16 @@
 
 			<!-- number of rows starts here -->
 				<div class="row">
-				     <div class="large-6 columns">
+				    <div class="large-6 columns">
 					      <!--<div class="range-slider radius" data-options="display_selector:#sliderOutput1;start: 1; end: 10;" data-slider="1">
                              <span class="range-slider-handle" style="transform: translateX(-1px);"></span>
                               <span class="range-slider-active-segment" style="width: 0%;"></span>
                            </div>-->
              <label><a href="#" data-tooltip="1" class="has-tip tip-left" data-selector="tooltip" title="Number of Questions">
- Rows</a>
+ Questions</a>
 						</label>      <br> 
-        <select id="sliderOutput1" style="width:55px; height:32px;" ng-model="rows" ng-change="matrix_change()">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
+        <select disabled id="sliderOutput1" style="width:55px; height:32px;" ng-model="rows">
+ <option>{{rows}}</option>
         </select>
                        </div>
                         <div class="large-6 columns">
@@ -69,7 +60,7 @@
                               <span class="range-slider-active-segment" style="width: 0%;"></span>
                            </div>-->
            <label><a href="#" data-tooltip="2" class="has-tip tip-right" data-selector="tooltip" title="Number of Stars">
- Columns</a>
+ Stars</a>
 						</label> <br>
                             <select id="sliderOutput2" style="width:55px; height:32px;" ng-model="cols" ng-change="matrix_change()">
           <option value="1">1</option>
