@@ -1,13 +1,12 @@
-//printing the star box starts in ratings page
-var rows=1;
+  //printing the star box starts in ratings page
 var app1 = angular.module('app1', []);
  
-app1.controller("printmatrix", function($scope){
- 
-                   $scope.rows=rows;
+app1.controller("rat_center", function($scope){
+                   
+                   $scope.rows=1;
                    $scope.cols=5;
                    $scope.rating_title="Title";
-//function triggerd when rows or columns are chan
+//function triggerd when rows or columns are changed
 		$scope.matrix_change= function(){
 		    	
 		// matrix printing starts.....	
@@ -63,3 +62,5 @@ function delete_row(row_id){
 	 document.getElementById(row_id).innerHTML="";
 	 
 	}
+
+//sending questions js
