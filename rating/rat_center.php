@@ -1,5 +1,5 @@
 <div class="row" ng-controller="rat_center">
-	<div class="large-12 columns">
+	<div class="large-12 columns" id="rat_center">
 		<div class="row"><!--top nav bar starts-->
 	       		<div class="large-6 columns"><h3>Ne1w Rating</h3></div>
 			<!--TOP menu bar for -->
@@ -23,7 +23,7 @@
 		 </div> <!--top nav ends-->
                 <form action="#" method="get">		
               <!--top title box starts-->  
-	    <div class="row panel callout radius">
+	    <div class="row panel callout radius" >
 			<div class="large-8 columns">
 		   	    <label><a href="#">Rating Title</a></label><br>
 				<input type="text" required ng-model="rating_title" name="rating_title" required placeholder="Title">
@@ -94,7 +94,7 @@
       <!--Bottom div for customizing stars starts-->
  
           <div class="row">
-		<center><a class="button small" >Cancel</a> <button type="submit" class="button secondary small" type="submit">Save Questions</button></center>
+		<center><a class="button small" >Cancel</a> <a onclick="showStyles();" type="submit" href="#" class="button secondary small"  type="submit">Save Questions</a></center>
 			  <!---    <a href="#" data-reveal-id="starbox" class="button small">Stars' Text</a>
             <div id="starbox" class="reveal-modal radius" data-reveal style="width:500px;">
 		         <h5>Customize your stars' label</h5>

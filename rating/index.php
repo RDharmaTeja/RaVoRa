@@ -13,6 +13,24 @@ Ra-Vo-Ra
 <script src="../includes/js/angular.min.js"></script>
 <script src="../includes/js/my_angular_apps.js"></script>
  <script>
+	 function showStyles(){
+		 		var xmlhttp;
+		if (window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+		}
+		else{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		xmlhttp.open("POST","show_styles.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState==4&&xmlhttp.status==200){
+				document.getElementById("rat_center").innerHTML=xmlhttp.responseText;
+				}
+			}
+		 
+		 }
+	 
 	 /*
 	  function display_matrix(){
 		  
