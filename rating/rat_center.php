@@ -1,7 +1,7 @@
 <div class="row" ng-controller="rat_center">
 	<div class="large-12 columns" id="rat_center">
 		<div class="row"><!--top nav bar starts-->
-	       		<div class="large-6 columns"><h3>Ne1w Rating</h3></div>
+	       		<div class="large-6 columns"><h3>New Rating</h3></div>
 			<!--TOP menu bar for -->
 			     <div class="large-6 columns">
 			           <div class="button-bar">
